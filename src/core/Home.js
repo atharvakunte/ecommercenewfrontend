@@ -27,14 +27,16 @@ const Home = () => {
     <Base title="Home" description="Welcome to the store!">
       <div className="row text-center">
         <h1 className="text-white">All Products</h1>
-        <div className="row">
-          {products.map((product, index) => {
-            return (
-              <div key={index} className="col">
-                <Card product={product} />
-              </div>
-            );
-          })}
+        <div className="container">
+          <div className="row">
+            {products.map((product, index) => {
+              return (
+                <div key={index}>
+                  <Card product={product} className="row" />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </Base>
